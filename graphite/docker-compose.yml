@@ -1,0 +1,8 @@
+version: '2'
+services: 
+  graphite:
+    image: sitespeedio/graphite
+    ports: 
+      - 10088:80
+      - 2003:2003
+    
