@@ -1,0 +1,6 @@
+version: '2'
+services: 
+  ganglia:
+    image: wookietreiber/ganglia
+    ports: 
+      - 10096:80
