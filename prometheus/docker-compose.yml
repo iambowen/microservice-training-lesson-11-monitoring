@@ -27,6 +27,7 @@ services:
         - node-exporter:node-exporter
         - prometheus-rancher-exporter:prometheus-rancher-exporter
         - event-service:event-service
+        - rails:rails
 
   influxdb:
     image: tutum/influxdb:0.10
@@ -66,6 +67,7 @@ services:
 
   mongo:
     image: mongo
+
   event-service:
     image: iambowen/event-service
     environment:
@@ -75,3 +77,11 @@ services:
       - "8888:8080"
     depends_on:
       - mongo
+
+  rails:
+    image: iambowen/railsitup
+    ports:
+      - "9292:9292"
+
+
+###process_max_fds      
